@@ -1,0 +1,14 @@
+.pagenotfound {
+  background-image: url("../../../../assets/images/pagenot.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  background-position: center;
+}
+
+@media screen and (max-width: 575px) {
+  .pagenotfound{
+    background-image: url("../../../../assets/images/pagenotsmall.png");
+  }
+}
+

@@ -1,0 +1,15 @@
+
+.setTab{
+  margin-top: 76px;
+.table{
+  overflow: auto;
+}
+.admin{
+  span{
+    font-weight: bold;
+  }
+}
+}
+:host ::ng-deep .mat-tab-body-content {
+  overflow: hidden;
+}

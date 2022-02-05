@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="background">
+  <div class="personal">
+  <h2> Personal Board </h2>
+  <button mat-button mat-stroked-button type="button" [matMenuTriggerFor]="menu" type="button">... Show Menu </button>
+</div>
+
+
+<mat-menu class="menu" #menu="matMenu">
+  <p class="heading"> Menu </p>
+  <mat-divider></mat-divider>
+  <div class="mt-3">
+ <p> Close Board </p>
+ <p> Archieve Items </p>
+ <p> Background Change </p>
+</div>
+</mat-menu>
+
+<div cdkDropListGroup class="cdkDiv">
+  <div class="example-container">
+    <input type="text" placeholder="Title..." class="form-control">
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag (click)="openDialog()">
+      {{item}}
+      </div>
+    </div>
+    <button class="w-full btn" mat-button type="button">
+      <span>Add Card</span>
+    </button>
+  </div>
+
+  <div class="example-container">
+    <input type="text" placeholder="Title..." class="form-control">
+
+    <div
+      cdkDropList
+      [cdkDropListData]="done"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+    <button class="w-full btn" mat-button type="button">
+      <span>Add Card</span>
+    </button>
+  </div>
+
+  <div class="example-container">
+    <input type="text" placeholder="Title..." class="form-control">
+    <div
+      cdkDropList
+      [cdkDropListData]="todo1"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo1" cdkDrag>{{item}}</div>
+    </div>
+    <button class="w-full btn" mat-button type="button">
+      <span>Add Card</span>
+    </button>
+  </div>
+
+  <div class="example-container">
+    <input type="text" placeholder="Title..." class="form-control">
+
+    <div
+      cdkDropList
+      [cdkDropListData]="done1"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done1" cdkDrag>{{item}}</div>
+    </div>
+    <button class="w-full btn" mat-button type="button">
+      <span>Add Card</span>
+    </button>
+  </div>
+</div>
+
+</div>

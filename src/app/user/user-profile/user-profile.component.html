@@ -1,0 +1,67 @@
+<!-- <mat-toolbar color="primary" class="header">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <i class="fa fa-user" aria-hidden="true"></i>
+  </button>
+  <span>Welcome Deepak</span>
+  <span class="example-spacer"></span>
+
+  <button matTooltip="Back to Home" mat-icon-button class="example-icon"[routerLink]="['/home']">
+    <mat-icon>home</mat-icon>
+  </button>
+</mat-toolbar> -->
+
+<app-header></app-header>
+  <div class="container">
+    <form [formGroup]="formData" (ngSubmit)="submitData()" [ngClass]="{ 'form-submit': isSubmit}">
+      <div class="user-detail mt-2">
+        <h2> About </h2>
+      </div>
+      <div class="user-file-upload">
+        <div class="flex-auto mt-4 mb-4">
+      <img [src]="imageUrl ? imageUrl: '../../../assets/images/profilepic.jpg'" class="user-file-icon">
+      <input type='file' class="input-file" #fileInput (change)="uploadFile($event)" />
+      <button type="button" (click)="fileInput.click()"
+        class="btn btn-sm btn-primary user-input-file-btn">Upload</button>
+        <!-- <button mat-raised-button color="warn" *ngIf="show" class="user-delete-file-btn" (click)="onRemove()"> Remove </button> -->
+    </div>
+  </div>
+
+        <div class="mb-3">
+          <label class="form-label">First Name</label>
+          <input type="name" formControlName="firstName" class="form-control" value="" required>
+
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Last Name</label>
+          <input type="name" formControlName="lastName" class="form-control" value="" >
+
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" formControlName="email" class="form-control" value="" required>
+
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input type="address" formControlName="address" class="form-control" value="" >
+
+        </div>
+        <div class="mb-3">
+          <label class="form-label">City</label>
+          <input type="city" formControlName="city" class="form-control" value="" >
+
+        </div>
+        <div class="mb-3">
+          <label class="form-label">State</label>
+          <input type="state" formControlName="state" class="form-control" value="" >
+
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Pin</label>
+          <input type="number" formControlName="pin" class="form-control" value="" >
+
+        </div>
+        <button type="submit" [disabled]="formData.invalid" class="btn btn-primary mb-4">Save</button>
+      </form>
+  </div>
+

@@ -1,0 +1,23 @@
+.logo{
+  .card {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin: 0 6px;
+
+      .card-img-top {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        height: 125px;
+        object-fit: contain;
+      }
+      .card-title{
+        text-align: center;
+      }
+}
+}
+
+@media screen and (max-width: 600px){
+.logo{
+  margin-top: 10%;
+}
+}

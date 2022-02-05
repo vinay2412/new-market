@@ -1,0 +1,24 @@
+.boardbg {
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    input {
+      color: #fff;
+    }
+  }
+  .boardbtn {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+::ng-deep .mat-form-field {
+  .mat-form-field-label {
+    color: #fff;
+  }
+  .mat-select-value-text {
+    color: #fff;
+  }
+}

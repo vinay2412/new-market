@@ -1,0 +1,79 @@
+// .background-image {
+//   background-image: url("../../../assets/images/john-vicente-D_L0MZ59b94-unsplash.jpg");
+//   // background-color: rgb(194, 67, 67);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   height: -webkit-fill-available;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   .marketlogo{
+//     width: 75px;
+//     height: 60px;
+//   }
+//   h1{
+//     display: flex;
+//     justify-content: center;
+//     color: antiquewhite;
+//     font-family: ui-monospace;
+//   }
+//   input{
+//     background-color: transparent;
+//     color: #fff;
+//   }
+//   .form-label, .exampleCheck1{
+//     font-size: 20px;
+//     font-weight: 500;
+//     color: #fff;
+//   }
+//   .form-check-label{
+//     color: #fff;
+//   }
+//   .signing{
+//     margin-top: 30px;
+//     p{
+//       color: #fff;
+//     }
+//   }
+// }
+
+.auth-container{
+  padding: 40px;
+    background-image: url('../../../assets/login-img/auth-bg-blue.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth-box{
+      background: #FFFFFF;
+      border-radius: 4px;
+      padding: 31px 70px;
+      max-width: 440px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .auth-form-wrapper{
+        color: rgb(170, 170, 170);
+        .signing{
+          font-size: 13px;
+        }
+      }
+      .logo-wrap{
+        .logo{
+          width: 200px;
+          height: 100px;
+        }
+      }
+    }
+    .form_login {
+      margin-top: 30px;
+  }
+}
+::ng-deep .mat-form-field {
+  .mat-form-field-label {
+    color: rgb(170, 170, 170);
+}
+}

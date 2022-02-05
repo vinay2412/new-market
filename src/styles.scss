@@ -1,0 +1,243 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+* {
+  touch-action: manipulation;
+}
+.filter-search {
+  .owl {
+    owl-carousel-o {
+      .owl-carousel {
+        .owl-nav {
+          .owl-prev {
+            position: absolute;
+            left: -34px;
+            bottom: 95px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+
+          .owl-next {
+            position: absolute;
+            bottom: 95px;
+            right: -33px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.selling-product {
+  .owl {
+    owl-carousel-o {
+      .owl-carousel {
+        position: relative;
+        min-height: 289px;
+        display: block;
+        .owl-nav {
+          .owl-prev {
+            position: absolute;
+            left: -34px;
+            bottom: 160px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+
+          .owl-next {
+            position: absolute;
+            bottom: 160px;
+            right: -33px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .market-status {
+//   .owl {
+//     owl-carousel-o {
+//       .owl-carousel {
+//         .owl-nav {
+//           .owl-prev {
+//             display: none;
+//           }
+
+//           .owl-next {
+//             display: none;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.logo {
+  .owl {
+    owl-carousel-o {
+      .owl-carousel {
+        .owl-nav {
+          .owl-prev {
+            position: absolute;
+            left: -34px;
+            bottom: 60px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+
+          .owl-next {
+            position: absolute;
+            bottom: 60px;
+            right: -33px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular-product {
+  .owl {
+    owl-carousel-o {
+      .owl-carousel {
+        position: relative;
+        min-height: 350px;
+        display: block;
+
+        .owl-nav {
+          .owl-prev {
+            position: absolute;
+            left: -34px;
+            bottom: 190px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+
+          .owl-next {
+            position: absolute;
+            bottom: 190px;
+            right: -33px;
+            background-color: transparent;
+            color: #000;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .filter-search,
+  .selling-product,
+  .logo,
+  .popular-product {
+    .owl {
+      owl-carousel-o {
+        .owl-carousel {
+          .owl-nav {
+            .owl-prev {
+              position: absolute;
+              left: 194px;
+              bottom: -35px;
+            }
+
+            .owl-next {
+              position: absolute;
+              bottom: -35px;
+              right: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .popular-product{
+    .owl {
+      owl-carousel-o {
+        .owl-carousel {
+          .owl-nav {
+            .owl-prev {
+              bottom: 5px;
+            }
+
+            .owl-next {
+              bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .filter-search,
+  .selling-product,
+  .logo,
+  .popular-product {
+    .owl {
+      owl-carousel-o {
+        .owl-carousel {
+          .owl-nav {
+            .owl-prev {
+              left: 135px;
+              bottom: -35px;
+            }
+
+            .owl-next {
+              bottom: -35px;
+              right: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .filter-search,
+  .selling-product,
+  .logo,
+  .popular-product {
+    .owl {
+      owl-carousel-o {
+        .owl-carousel {
+          .owl-nav {
+            .owl-prev {
+              left: 0px;
+            }
+
+            .owl-next {
+              right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

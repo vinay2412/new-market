@@ -1,0 +1,77 @@
+<app-header></app-header>
+<mat-tab-group class="setTab" mat-align-tabs="center">
+  <mat-tab label="Users-list">
+    <div class="row my-2">
+      <div class="col-md-12 mb-2">
+        <div class="alert alert-info" *ngIf="data">
+          <h5>Welcome Users List  </h5>
+        </div>
+        <div class="alert alert-primary" *ngIf="!data">
+          <h5> Record Not Found </h5>
+        </div>
+        </div>
+      </div>
+    <div class="table mt-2">
+      <ng2-smart-table [source]="data" [settings]="settings"></ng2-smart-table>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Admin-list">
+      <div class="row my-2">
+        <div class="col-md-12 mb-2">
+          <div class="alert alert-info" *ngIf="adminList">
+            <h5>Welcome Admin Portal  </h5>
+          </div>
+          <div class="alert alert-primary" *ngIf="!adminList">
+            <h5> Record Not Found </h5>
+          </div>
+        </div>
+        <!-- <div class="col-md-12 ml-4 admin" *ngIf="adminList">
+        <p> Total Page: <span> {{adminList.page}} </span></p>
+        <p> Users:<span> {{adminList.per_page}} </span></p>
+        <p> About:<span> {{adminList.support.text}} </span></p>
+      </div> -->
+      </div>
+      <div class="table mt-2">
+      <!-- <table class="table table-striped" lightbox-group>
+        <thead class="thead-dark">
+          <tr>
+            <th> Id </th>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Email </th>
+            <th> Image </th>
+          </tr>
+        </thead>
+        <tbody *ngIf="adminList.data">
+          <tr *ngFor="let i of adminList.data">
+            <td> {{i.id}} </td>
+            <td> {{i.first_name}} </td>
+            <td> {{i.last_name}} </td>
+            <td> {{i.email}} </td>
+            <td> <img [src]="i.avatar" lightbox [fullImage]="{path: i.avatar}" [backgroundOpacity]="0.8"  height="40" width="70"> </td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Public-users">
+    <div class="row my-2">
+      <div class="col-md-12 mb-2">
+        <div class="alert alert-info" *ngIf="rowData">
+          <h5>Welcome Public Portal  </h5>
+        </div>
+        <div class="alert alert-primary" *ngIf="!rowData">
+          <h5> Record Not Found </h5>
+        </div>
+      </div>
+      </div>
+    <div class="table mt-2">
+      <ag-grid-angular  class="ag-theme-alpine" style="width: 100%; height: 180px;" [rowData]="rowData"
+        [columnDefs]="columnDefs">
+      </ag-grid-angular>
+    </div>
+  </mat-tab>
+
+</mat-tab-group>

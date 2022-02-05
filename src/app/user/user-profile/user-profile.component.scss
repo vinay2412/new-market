@@ -1,0 +1,47 @@
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.example-icon{
+  i{
+    font-size: 25px;
+  }
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.user-detail{
+  display: flex;
+  justify-content: center;
+  h2{
+    font-family: fantasy;
+    font-weight: bold;
+    color: rgb(82, 156, 252);
+
+  }
+}
+.user-file-upload{
+  .flex-auto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-file-icon{
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    border: 3px solid grey;
+  }
+  input.input-file {
+    display: none;
+    }
+    .user-input-file-btn{
+       margin-top: 10px;
+    }
+}

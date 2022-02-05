@@ -1,0 +1,62 @@
+<!-- <div class="background-image">
+<div class="container p-5">
+  <div>
+    <h1> Login Auto Market </h1>
+    <form [formGroup]="form" (ngSubmit)="submitLogin()">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" [(ngModel)]="userName" name="email" formControlName="email" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" formControlName="password" />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" formControlName="remember">
+        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+      </div>
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="signing">
+      <p> Don't have an account? <a [routerLink]="['/auth/signup']"> Sign Up </a> </p>
+    </div>
+  </div>
+</div>
+</div> -->
+
+<!-- New login design -->
+<div class="auth-container">
+  <div class="auth-box">
+    <div class="logo-wrap">
+			<img class="logo" src="../../../assets/auto-market/regisautp.png" alt="" />
+		</div>
+    <div class="auth-form-wrapper">
+      <form [formGroup]="form" (ngSubmit)="submitLogin()" class="form_login">
+        <div class="mb-3">
+        <mat-form-field class="example-full-width">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Arun1234" [(ngModel)]="userName" name="userName" formControlName="userName" value="" required>
+        </mat-form-field>
+      </div>
+        <div class="mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Pasword</mat-label>
+            <input [type]="isPasswordVisible ? 'text' : 'password'" matInput placeholder="*****" [(ngModel)]="password" name="password" formControlName="password" value="" required>
+          </mat-form-field>
+          <i *ngIf='isPasswordVisible' (click)="togglePasswordVisibility()" class="fa fa-eye toggle-password-visibility-btn"></i>
+						<i *ngIf='!isPasswordVisible' (click)="togglePasswordVisibility()" class="fa fa-eye-slash toggle-password-visibility-btn"></i>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" formControlName="remember">
+          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        </div>
+        <button [class.spiner]="" [disabled]="form.invalid" utton mat-raised-button type="submit" class="btn btn-primary w-100">Login
+          <span *ngIf="loading" class="spinner-border spinner-border-sm spinner-width-md" role="status" aria-hidden="true"></span>
+        </button>
+      </form>
+      <div class="signing mt-3">
+        <p> Don't have an account? <a [routerLink]="['/auth/signup']"> Sign Up </a> </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="boardbg">
+<div class="form-wrapper">
+  <form class="form_board">
+    <div class="mb-3">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Board Name" value="">
+      </mat-form-field>
+    </div>
+    <div class="mb-3">
+      <mat-form-field class="example-full-width">
+        <mat-label>Type</mat-label>
+        <mat-select>
+          <mat-option value="one"> Private </mat-option>
+          <mat-option value="two"> Public </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="boardbtn">
+    <button utton mat-raised-button type="cancle" class="btn btn-secondary w-40">Cancle</button>
+    <button [class.spiner]="" utton mat-raised-button type="submit" class="btn btn-primary w-40">Create
+      <!-- <span class="spinner-border spinner-border-sm spinner-width-md" role="status" aria-hidden="true"></span> -->
+    </button>
+  </div>
+  </form>
+</div>
+</div>

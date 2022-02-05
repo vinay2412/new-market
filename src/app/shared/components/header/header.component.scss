@@ -1,0 +1,243 @@
+.header {
+  .marketlogo{
+    width: 75px;
+    height: 60px;
+  }
+  .page-links {
+    .nav-item {
+      margin-right: 12px;
+    }
+
+    .active,
+    .nav-item:hover {
+      border-bottom: 3px solid red;
+      cursor: pointer;
+      font-weight: bold;
+      a {
+        border: none;
+        color: #000;
+      }
+    }
+
+    // .active, .nav-item{
+    //   border-bottom: 3px solid red;
+    // }
+  }
+
+  .login-link {
+    display: flex;
+
+    ul {
+      li {
+        margin-top: 8px;
+      }
+    }
+
+    // .logout {
+    //   margin: 5px 3px;
+    //   width: 100px;
+    //   font-weight: 500;
+
+    //   .fa-user-o {
+    //     margin: 0px 5px;
+    //   }
+    // }
+  }
+
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    a:hover{
+      text-decoration: none;
+    }
+  }
+}
+::ng-deep .menuprofile{
+  width: 230px;
+  height: 180px;
+  padding: 25px 0px 0px 25px;
+  .boardProfile{
+    display: none;
+  }
+  .fa{
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .logout{
+    width: 100px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header {
+    .page-links {
+      .nav-item {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    .home::before {
+      display: none;
+    }
+
+    .page-links {
+      .active,
+      .nav-item:hover {
+        border: none;
+      }
+    }
+
+    .login-link {
+      display: contents;
+      ul {
+        li {
+          margin: 0px;
+        }
+      }
+
+      .car-icon {
+        display: none;
+      }
+
+      .star-icon {
+        display: none;
+      }
+    }
+
+    .sign-up {
+      padding: 6px 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header {
+    .page-links {
+      text-align: center;
+      float: none;
+
+      .nav-item {
+        margin-right: 0px;
+      }
+
+      .nav-icon {
+        display: contents;
+      }
+    }
+
+    .login-link {
+      ul {
+        li {
+          text-align: center;
+        }
+      }
+      .car-icon {
+        display: none;
+      }
+
+      .star-icon {
+        display: none;
+      }
+      .profile-info{
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    .login-link {
+      .car-icon {
+        display: none;
+      }
+
+      .star-icon {
+        display: none;
+      }
+    }
+
+    .sign-up {
+      padding: 6px 25px;
+    }
+  }
+}
+
+// new navbar css
+.backgroundnav{
+  background-color: #232B2B;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+.example-spacer {
+  flex: 1 1 auto;
+}
+.profile-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.marketlogo{
+  width: 75px;
+  height: 60px;
+  margin-right: 60px;
+}
+.menuRoute{
+  ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-left: -30px;
+    li{
+      cursor: pointer;
+      color: #fff;
+      a{
+        color: #fff;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+      .active,
+    .nav-item:hover {
+      border-bottom: 3px solid rgb(80, 150, 241);
+      cursor: pointer;
+      font-weight: bold;
+      a {
+        border: none;
+        color: #000;
+
+      }
+    }
+    }
+}
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .menuRoute{
+    ul{
+      .profile{
+        display: none;
+      }
+    }
+  }
+  .backgroundnav{
+    .marketlogo{
+      margin: 0;
+    }
+  }
+  ::ng-deep .menuprofile{
+    height: 230px;
+    .boardProfile{
+      display: block;
+    }
+  }
+}
+

@@ -1,0 +1,31 @@
+.product-type{
+  margin-top: 70px;
+  .header{
+      margin-bottom: 25px;
+      h1{
+          font-weight: bold;
+      }
+      a:hover{
+          text-decoration: none;
+      }
+      h6{
+          color: #000;
+      }
+      .link{
+          margin:auto;
+          text-align: right;
+      }
+  }
+  .search-product{
+      .card {
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 6px;
+          margin: 0 6px;
+          .card-img-top{
+              height: 90px;
+              width: auto;
+              object-fit: cover;
+          }
+      }
+  }
+}

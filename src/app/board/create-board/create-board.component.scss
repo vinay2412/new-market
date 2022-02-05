@@ -1,0 +1,23 @@
+.create-board{
+  cursor: pointer;
+.board{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 110px;
+  background-color: rgb(177, 177, 177);
+  color: #fff;
+  h2{
+    padding: 35px 0;
+    font-family: sans-serif;
+    font-size: 21px;
+  }
+}
+}
+::ng-deep .custom-dialog > mat-dialog-container {
+  background-image: url('../../../assets/background/alex-tokuda-l60vO5jWjoA-unsplash.jpg');
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

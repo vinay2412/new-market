@@ -1,0 +1,143 @@
+<!-- <div class="background-image">
+  <div class="container">
+    <div>
+      <h1> Register Auto Market </h1>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="email" formControlName="firstName" class="form-control" required>
+          <ng-container *ngIf="(form.controls['firstName'].touched || form.controls['firstName'].dirty)">
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['firstName'].hasError('required')">
+             Name is Required
+            </div>
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['firstName'].hasError('minlength')">
+              Min 3 character..
+            </div>
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['firstName'].hasError('maxlength')">
+              Max 16 character..
+            </div>
+          </ng-container>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Email</label>
+          <input type="password" formControlName="email" class="form-control" required>
+          <ng-container *ngIf="(form.controls['email'].touched || form.controls['email'].dirty)">
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['email'].hasError('required')">
+              Email Required
+            </div>
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['email'].hasError('pattern')">
+              Enter Valid Email..
+            </div>
+          </ng-container>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <input type="email" formControlName="password" class="form-control" required>
+          <ng-container *ngIf="(form.controls['password'].touched || form.controls['password'].dirty)">
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['password'].hasError('required')">
+              Password Required
+            </div>
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['password'].hasError('minlength')">
+              Min 6 character...
+            </div>
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['password'].hasError('maxlength')">
+              Max 16 character...
+            </div>
+          </ng-container>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" class="form-control" required>
+          <ng-container *ngIf="(form.controls['confirmPassword'].touched || form.controls['confirmPassword'].dirty)">
+            <div class="alert alert-warning mt-1" *ngIf="form.controls['confirmPassword'].hasError('required')">
+              Confirm Password Required
+            </div>
+            <div class="alert alert-warning mt-1" *ngIf="form.hasError('matchPassword')">
+              Password not Match...
+              </div>
+          </ng-container>
+        </div>
+        <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Create Account</button>
+      </form>
+      <div class="signing">
+        <p> Back to Login Page? <a [routerLink]="['/auth/login']"> Login </a> </p>
+      </div>
+    </div>
+  </div>
+  </div> -->
+
+<div class="auth-container">
+  <div class="auth-box">
+    <div class="logo-wrap">
+      <img class="logo" src="../../../assets/auto-market/autologo.png" alt="" />
+    </div>
+    <div class="auth-form-wrapper">
+      <form class="form_login" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Arun1234" [(ngModel)]="name" name="userName" formControlName="name" value=""
+              required>
+            <mat-error *ngIf="form.hasError('required', 'name')">This is required.</mat-error>
+            <mat-error *ngIf="form.hasError('minlength', 'name')">Min 3 Character.</mat-error>
+            <mat-error *ngIf="form.hasError('maxlength', 'name')">Max 16 Character.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Arun1234" [(ngModel)]="email" name="userName" formControlName="email" value=""
+              required>
+            <mat-error *ngIf="form.hasError('required', 'email')">This is required.</mat-error>
+            <mat-error *ngIf="form.hasError('pattern', 'email')">Not Valid Email.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Arun1234" [(ngModel)]="userName" name="userName" formControlName="userName"
+              value="" required>
+            <mat-error *ngIf="form.hasError('required', 'userName')">This is required.</mat-error>
+            <mat-error *ngIf="form.hasError('minlength', 'userName')">Min 3 Character.</mat-error>
+            <mat-error *ngIf="form.hasError('maxlength', 'userName')">Max 12 Character.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Pasword</mat-label>
+            <input [type]="isPasswordVisible ? 'text' : 'password'" matInput placeholder="*****" [(ngModel)]="password"
+              name="password" formControlName="password" value="" required>
+            <mat-error *ngIf="form.hasError('required', 'password')">This is required.</mat-error>
+            <mat-error *ngIf="form.hasError('minlength', 'password')">Min 6 Character.</mat-error>
+            <mat-error *ngIf="form.hasError('maxlength', 'password')">Max 16 Character.</mat-error>
+          </mat-form-field>
+          <i *ngIf='isPasswordVisible' (click)="togglePasswordVisibility()"
+            class="fa fa-eye toggle-password-visibility-btn"></i>
+          <i *ngIf='!isPasswordVisible' (click)="togglePasswordVisibility()"
+            class="fa fa-eye-slash toggle-password-visibility-btn"></i>
+        </div>
+        <div class="mb-3">
+          <mat-form-field class="example-full-width">
+            <mat-label>Confirm Pasword</mat-label>
+            <input [type]="isPasswordVisible ? 'text' : 'password'" matInput placeholder="*****"
+              [(ngModel)]="confirmPassword" name="password" formControlName="confirmPassword" value="" required>
+            <mat-error *ngIf="form.hasError('required', 'confirmPassword')">This is required.</mat-error>
+            <mat-error *ngIf="form.controls['confirmPassword'].pristine || form.controls['confirmPassword'].errors?.MatchPassword">Password Not Match.</mat-error>
+          </mat-form-field>
+          <i *ngIf='isPasswordVisible' (click)="togglePasswordVisibility()"
+            class="fa fa-eye toggle-password-visibility-btn"></i>
+          <i *ngIf='!isPasswordVisible' (click)="togglePasswordVisibility()"
+            class="fa fa-eye-slash toggle-password-visibility-btn"></i>
+        </div>
+        <button [class.spiner]="" [disabled]="form.invalid" utton mat-raised-button type="submit"
+          class="btn btn-primary w-100">Register
+          <span *ngIf="loading" class="spinner-border spinner-border-sm spinner-width-md" role="status"
+            aria-hidden="true"></span>
+        </button>
+      </form>
+      <div class="signing mt-2">
+        <p> Back to Login Page <a [routerLink]="['/auth/login']"> Login </a> </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+.footer {
+  margin-top: 40px;
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  hr{
+      width: 100%;
+      background-color: rgb(197, 197, 197);
+      height: 0.5px;
+  }
+
+  .heading {
+    font-size: 16px;
+    font-weight: bold;
+
+    .fa {
+      margin-top: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .links {
+    ul {
+      list-style-type: none;
+      line-height: 2;
+      padding-inline-start: 0px;
+      cursor: pointer;
+    }
+  }
+
+  .google-link {
+    .app-store {
+      position: relative;
+      width: 160px;
+      height: 61px;
+      margin-left: 10px;
+    }
+
+    .google-play {
+      position: relative;
+      width: 181px;
+      height: 65px;
+    }
+  }
+
+  form {
+    .form-control {
+      width: 120px;
+      margin-left: 30px;
+    }
+  }
+
+  .footer-text{
+    font-size: 11px;
+    text-align: center;
+    color: grey;
+  }
+}
+
+select,
+input {
+  border: 0;
+}
+
+@media screen and (max-width: 991px){
+  .footer{
+    .links{
+      ul{
+      padding-right: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px){
+  .footer{
+    text-align: center;
+  }
+}

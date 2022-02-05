@@ -1,0 +1,73 @@
+// .Owl-Carousel{
+//   min-height: 350px;
+//   display: block;
+// }
+.popular-product {
+  margin-top: 55px;
+
+  .search-product {
+    margin: auto;
+  }
+
+  .card {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin: 0 6px;
+    height: 250px;
+    transition: all .3s linear;
+
+    .card-img-top {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      height: 145px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      .card-title {
+        color: rgb(182, 182, 182);
+        font-size: 13px;
+      }
+
+      .card-text {
+        margin-top: -7px;
+      }
+
+      .description {
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        display: block;
+        padding: 0;
+        cursor: pointer;
+        i{
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+
+  .card:hover {
+    height: 300px;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    .card-body {
+      .description {
+        height: auto;
+      }
+    }
+  }
+}
+
+select,
+input {
+  border: 0;
+}

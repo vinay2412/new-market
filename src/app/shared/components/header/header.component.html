@@ -1,0 +1,94 @@
+<!-- auto market header -->
+<!-- <div class="container header mt-2">
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <img class="navbar-brand mr-5 marketlogo" src="../../../../assets/images/marketlogo.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse  navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav page-links mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home/selling-product']" routerLinkActive="active">Sell Car</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home/popular-product']" routerLinkActive="active">Buy Car</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home/market-status']" routerLinkActive="active">Market</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home/contact']" routerLinkActive="active">Contact Us</a>
+        </li>
+      </ul>
+      <form class="login-link">
+        <ul class="navbar-nav nav-icon me-auto mb-2 mb-lg-0">
+
+
+          <li class="nav-item star-icon">
+            <a class="nav-link active" [matMenuTriggerFor]="notify" >
+              <i class="fa fa-bell ml-2 mr-3" aria-hidden="true" style="font-weight: bold;
+              font-size: 19px;"></i>
+            </a>
+          </li>
+          <mat-menu #notify="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+
+
+          <div class="mt-2 profile-info">
+            <img  [matMenuTriggerFor]="profile" class="profile-image" src="../../../../assets/images/profile.jpg">
+          </div>
+          <mat-menu class="menuprofile" #profile="matMenu">
+            <p class="info"><i class="fa fa-user" aria-hidden="true"></i><a [routerLink]="['/user/profile']"> Profile Info.. </a></p>
+            <p><i class="fa fa-key" aria-hidden="true"></i><a [routerLink]="['/user/password']"> Change Password </a></p>
+            <i class="fa fa-sign-out" aria-hidden="true"></i><button class="btn btn-sm btn-danger text-white logout" (click)="logout()"> Logout </button>
+          </mat-menu>
+
+    </ul>
+      </form>
+    </div>
+  </nav>
+</div> -->
+
+<!-- new navbar -->
+<mat-toolbar class="backgroundnav">
+    <img class="marketlogo" src="../../../../assets/logo/flashysign.png">
+    <div class="menuRoute mt-2">
+      <ul>
+        <li class="nav-item mr-4">
+          <a routerLinkActive="active" [routerLink]="['/home']"> Dashboard </a>
+           </li>
+        <li class="nav-item mr-4">
+          <a routerLinkActive="active" [routerLink]="['/list/users']"> Users </a>
+        </li>
+        <li class="nav-item profile mr-4">
+          <a routerLinkActive="active" [routerLink]="['/board/board-list']"> Board </a>
+           </li>
+      </ul>
+    </div>
+  <span class="example-spacer"></span>
+  <div class="mt-2 profile-info">
+    <img  [matMenuTriggerFor]="profile" class="profile-image" src="../../../../assets/images/profilepic.jpg">
+  </div>
+  <mat-menu class="menuprofile" #profile="matMenu">
+    <p class="boardProfile"> <i class="fa fa-th-large" aria-hidden="true"></i> <a routerLinkActive="active" [routerLink]="['/board/board-list']"> Board </a> </p>
+    <p class="info"><i class="fa fa-user" aria-hidden="true"></i><a [routerLink]="['/user/profile']"> Profile Info.. </a></p>
+    <p><i class="fa fa-key" aria-hidden="true"></i><a [routerLink]="['/user/password']"> Change Password </a></p>
+    <i class="fa fa-sign-out" aria-hidden="true"></i><button class="btn btn-sm btn-danger text-white logout" (click)="logout()"> Logout </button>
+  </mat-menu>
+</mat-toolbar>
